@@ -1,0 +1,160 @@
+1. Write a Python program to check if a value exists in an array.
+Sample Output: 
+Original array:
+["Red", "Green", "Blue", "White"]
+Check if 'Green' in color array!
+true
+Check if 'Pink' in color array!
+false
+
+2. Write a Python program to check whether 7 appears as either the first or last element in a given array. The array length must be 1 or more. 
+Sample Output: 
+true
+true
+false
+
+3. Write a Python program to pick a number of random elements from a given array.
+Sample Output: 
+Original array:
+[12, 34, 23, 56]
+ 2 random elements from the array.
+[34, 12]
+ 3 random elements from the array.
+[56, 12, 34]
+
+4. Write a Python program to check whether first and the last element are the same as a given array of integers. The array length must be 1 or more.
+Sample Output: 
+false
+true
+false
+
+5. Write a Python program to compute the sum of elements in a given array. 
+Sample Output: 
+  
+Original array:
+[12, 34, 23, 56]
+Sum of the values of the above array:
+125
+  
+6. Write a Python program to remove duplicate elements from a given array.  
+Sample Output: 
+Original array:
+[1, 2, 3, 4, 1, 2, 2, 3, 5, 6]
+ Array with unique elements:
+[1, 2, 3, 4, 5, 6]
+
+7. Write a Python program to check two given arrays of integers and test if they have the same first element or they have the same last element. Both arrays length must be 1 or more.  
+Sample Output: 
+true
+false
+true
+
+8. Write a Python program to remove blank elements from a given array.
+ Sample Output: 
+Original array:
+["Red", "Green", "", "Blue", "White"]
+Remove a blank element from the above array:
+["Red", "Green", "Blue", "White"]
+
+9. Write a Python program to split a delimited string into an array.  
+Sample Output: 
+Original delimited string:
+Red, Green, Blue, White1, 3, 4, 5, 7String to array:
+["Red", " Green", " Blue", " White"]
+[1, 3, 4, 5, 7]
+
+10. Write a Python program to create an array with the elements "rotated left" of a given array of ints length 3. 
+ Sample Output: 
+[2, 5, 1]
+[2, 3, 1]
+[2, 4, 1]
+
+11. Write a Python program to create a new array with the elements in reverse order from a given an array of integers length 3. 
+12. Write a Python program to find the larger between the first and last elements of a given array of integers and length 3. Replace all the other values to be that value. Return the changed array. 
+13. Write a Python program to concatenate an array of arrays into one. 
+14. Write a Python program to check if a given array of integers contains 3 twice, or 5 twice. 
+15. Write a Python program to find the largest odd value from a given array. 
+16. Write a Python program to create a new array using the first three elements of a given array of integers.
+17. Write a Python program to get the number of even integers in a given array.
+18. Write a Python program to find the difference between the largest and smallest values of a given array of integers.
+19. Write a Python program to compute the average values of a given array of except the largest and smallest values. 
+20. Write a Python program to compute the sum of the numbers of a given array except for the number 17 and numbers that come immediately after a 17. 
+21. Write a Python program to compute the sum of every third element of a given array of integers.
+22. Write a Python program to check whether every element is a 3 or a 5 in a given array of integers.
+23. Write a Python program to check whether a given value appears everywhere in a given array. A value is "everywhere" in an array if it presents for every pair of adjacent elements in the array.
+24. Write a Python program to check whether a given array contains a 3 next to a 3 or a 5 next to a 5, but not both.
+25. Write a Python program to check whether a given array of integers contains two 6's next to each other, or there are two 6's separated by one element, such as [6, 2, 6]. 
+26. Write a Python program to check whether there is a 2 in the array with a 3 somewhere later in a given array of integers.
+27. Write a Python program to convert an array into a hash. 
+Sample Output: 
+Original array:
+[(10, 5), (20, 3), (30, 4), (10,2)]
+Hash:
+{10:(5,2), 20:(3), 30:(4)}
+
+28. Write a Python program to find the most occurred item in a given array. 
+ Sample Output: 
+Original array:
+[10, 20, 30, 40, 10, 10, 20]
+Frequency of numbers:
+{10: 3, 20: 2, 30: 1, 40: 1}
+
+29. Write a Python program to check whether all items are identical in a given array. 
+Sample Output: 
+Original array:
+[10, 20, 30, 40, 10, 10, 20]
+If all items are identical?
+false
+Original array:
+[10, 10, 10]
+If all items are identical?
+true
+
+30. Write a Python program to search items starting with a specified string of a given array.  
+Sample Output: 
+Original array:
+["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"]
+Search items start with 'ab':
+["abcde", "abdf", "abdgse"]
+Search items start with 'b':
+["bdefa", "bacdef"]
+
+31. Write a Python program to iterate an array starting from the last element. 
+Sample Output: 
+Original array:
+[10, 20, 30, 40, 10, 10, 20]
+Reverse array:
+20
+10
+10
+40
+30
+20
+10
+
+32. Write a Python program to iterate over the first n elements of a given array. 
+Sample Output: 
+Original array:
+["abcde", "abdf", "adeab", "abdgse", "bdefa", "bacdef"]
+First 3 elements:
+["abcde", "abdf", "adeab"]
+
+33. Write a Python program to sort a given array of strings by length. 
+Sample Output: 
+Original array:
+["abcde", "abdf", "adeab", "abdgeee", "bdefa", "abc", "ab", "a", "bacdef"]
+Sorted array of strings by length
+["a", "ab", "abc", "abdf", "abcde", "adeab", "bdefa", "bacdef", "abdgeee"]
+
+34. Compress the array, and remove all 0 from it and fill in the elements on the right side of the last 0 with the values ​​-1
+35. Convert the array so that the first go all negative elements, and then positive (0 is considered as positive)
+36. Write a program which counts the number of times a number appears in an array.
+
+37. In a two-dimensional array of order M and N, swap the specified columns.
+
+38. Given the single-mass array with predefined values with a size of 10 items.  Show on the screen array, and find the values that are repeated two and more times.
+
+39. Given the single-mass array with predefined values with a size of 10 items. Show on the screen array, and find the value that is the smallest odd number.
+
+40. Given the single-mass array. Cyclically shift the array on the K elements, on the right or left side.
+
