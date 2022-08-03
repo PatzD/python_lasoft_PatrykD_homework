@@ -50,7 +50,7 @@ def task_8(num_1, num_2, num_3):
     """
     checks 3 numbers and returns true if one or more of them are small(1-10 and inclusive)
     """
-    return num_1 in range(1, 10) or num_2 in range(1, 10) or num_3 in range(1, 10)
+    return num_1 in range(1, 11) or num_2 in range(1, 11) or num_3 in range(1, 11)
 
 
 def task_9(num_1, num_2, num_3):
@@ -58,11 +58,11 @@ def task_9(num_1, num_2, num_3):
     checks 3 numbers to see if one only is small
     """
     smalls = 0
-    if num_1 in range(1, 10):
+    if num_1 in range(1, 11):
         smalls += 1
-    if num_2 in range(1, 10):
+    if num_2 in range(1, 11):
         smalls += 1
-    if num_3 in range(1, 10):
+    if num_3 in range(1, 11):
         smalls += 1
 
     if smalls > 1:
