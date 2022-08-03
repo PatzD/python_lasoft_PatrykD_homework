@@ -46,13 +46,6 @@ def task_6(first_name, last_name):
     return "hello" + last_name + " " + first_name
 
 
-def task_7():
-    """
-    accepts filename from user, prints extension of that
-    """
-    pass
-
-
 def task_8(num_1, num_2, num_3):
     """
     checks 3 numbers and returns true if one or more of them are small(1-10 and inclusive)
