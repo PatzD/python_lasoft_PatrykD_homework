@@ -80,14 +80,12 @@ def task_9(delimited_string):
     """
     return delimited_string.split(',')
 
-def task_10():
+def task_10(original_array):
     """
     create array with elements rotated left  of given array of ints length 3
     """
+    return original_array[1:] + original_array[:1]
 
-    #im not sure what the question is asking for here by "rotated left"
-
-    pass
 
 def task_11(original_array):
     """reverse array of ints length 3"""
