@@ -89,17 +89,14 @@ def task_10(original_array):
 
 def task_11(original_array):
     """reverse array of ints length 3"""
-    reversed_array = original_array[::-1]
-    return reversed_array
+    return original_array[::-1]
 
 def task_12(original_array):
     """
     find largest element of array of length 3 and return array with all elements set to the largest element
     """
     max_element = max(original_array)
-    for element in original_array:
-        element = max_element
-    return original_array
+    return [max_element for _ in range(len(original_array))]
 
 def task_13(array_arrays):
     """
@@ -121,7 +118,7 @@ def task_15(array):
     find largest odd value in given array
     """
     array.sort()
-    for element in array:
+    for element in array[::-1]:
         if element % 2 != 0:
             return element
     return None
