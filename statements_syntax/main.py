@@ -122,3 +122,146 @@ def task_15(array):
         if element % 2 != 0:
             return element
     return None
+
+
+def task_16(og_array):
+    """
+    create array using first three elements of a given array
+    """
+    return og_array[:3]
+
+def task_17(og_array):
+    """
+    return amount of even numbers in given array
+    """
+    return sum(1 for element in og_array if element % 2 == 0)
+
+def task_18(og_array):
+    """
+    find diffrence between largest and smallest number in given array
+    """
+    return max(og_array) - min(og_array)
+
+def task_19(og_array):
+    """
+    calculate average of elements in given array expect largest and smallest values
+    """
+    og_array.remove(max(og_array))
+    og_array.remove(min(og_array))
+    return sum(og_array) / len(og_array)
+
+def task_20(og_array):
+    """
+    calculate sum of numbers of given array except the number 17 and number that comes after a 17
+    """
+    sum = 0
+    skip = False
+    for element in og_array:
+        if element == 17:
+            skip = True
+        elif skip:
+            skip = False
+        elif element != 17 and not skip:
+            sum += element
+    return sum
+
+def task_21(og_array):
+    """
+    calculate sum of every 3rd element of array
+    """
+    sum = 0
+    for i in range(0, len(og_array), 3):
+        sum += og_array[i]
+    return sum
+
+def task_22(og_array):
+    """
+    check whether all elements in array are a 3 or a 5
+    """
+    return all(element % 3 == 0 or element % 5 == 0 for element in og_array)
+
+def task_23(og_array):
+    """
+    check whether given value appears everywhere in array
+    """
+    return og_array.count(og_array[0]) == len(og_array)
+
+def task_24(og_array):
+    """
+    check whether array contains a 3 next to a 3 or a 5 next to a 5 but not both
+    """
+    threes = False
+    fives = False
+    for i in range(len(og_array) - 1):
+        if og_array[i] == 3 and og_array[i + 1] == 3:
+            threes = True
+        if og_array[i] == 5 and og_array[i + 1] == 5:
+            fives = True
+    if threes and fives:
+        raise ValueError('Array contains both 3 and 5 next to each other')
+    return threes or fives
+
+def task_25(og_array):
+    """
+    check whether array contains two 6 next to each other or two or three 6 separated by one element
+    """
+    for index in range(len(og_array) - 1):
+        sixes = 0
+        if og_array[index] == 6 and og_array[index + 1] == 6:
+            return True
+        for i in range[0,4]:
+            if i == 2 and sixes == 1:
+                return True
+            if og_array[index + i] == 6:
+                sixes += 1
+            if sixes == 2 or sixes == 3:
+                return True
+    return False
+
+def task_26(og_array):
+    """
+    check if there is a 2 in the array and a 3 later somwhere
+    """
+    two = False
+    three = False
+    for element in og_array:
+        if element == 2:
+            two = True
+        if element == 3 and not two:
+            three = True
+    return two and three
+
+def task_27(og_array):
+    """
+    convert array into hash
+    """
+    #im not sure about the input here, is it simply going to be a 2 dimensional array, an array of arrays?
+    return None
+
+def task_28(og_array):
+    """
+    find most occuring item in array
+    """
+    dict = {}
+    for element in og_array:
+        if element in dict:
+            dict[element] += 1
+        else:
+            dict[element] = 1
+    return max(dict, key=dict.get)
+        
+def task_29(og_array):
+    """
+    check if all elements in array are identical
+    """
+    temp = og_array[0]
+    for element in og_array:
+        if element != temp:
+            return False
+    return True
+
+def task_30(start, og_array):
+    """
+    search items starting with certain letters in array
+    """
+    return [element for element in og_array if element.startswith(start)]
