@@ -128,51 +128,63 @@ def task_16(og_array):
     """
     create array using first three elements of a given array
     """
-    return og_array[:3]
+    array = []
+    for i in range(3):
+        array.append(og_array[i])
+    return array
 
 def task_17(og_array):
     """
     return amount of even numbers in given array
     """
-    return sum(1 for element in og_array if element % 2 == 0)
+    total = 0
+    for element in og_array:
+        if element % 2 == 0:
+            total += 1
 
 def task_18(og_array):
     """
     find diffrence between largest and smallest number in given array
     """
-    return max(og_array) - min(og_array)
+    maxim, minim = 0, 0
+    for element in og_array:
+        if element > maxim:
+            maxim = element
+        if element < minim:
+            minim = element
+    return maxim - minim
 
 def task_19(og_array):
     """
     calculate average of elements in given array expect largest and smallest values
     """
-    og_array.remove(max(og_array))
-    og_array.remove(min(og_array))
-    return sum(og_array) / len(og_array)
-
+    maxim, minim = max(og_array), min(og_array)
+    total = 0
+    for element in og_array:
+        if element != maxim and element != minim:
+            total += element
+    return total / (len(og_array) - 2)
+     
 def task_20(og_array):
     """
-    calculate sum of numbers of given array except the number 17 and number that comes after a 17
+    calculate sum of numbers of given array except the number 17 and numbers that come immediately after a 17
     """
-    sum = 0
-    skip = False
+    total = 0
     for element in og_array:
         if element == 17:
-            skip = True
-        elif skip:
-            skip = False
-        elif element != 17 and not skip:
-            sum += element
-    return sum
+            break
+        total += element
+    return total
 
 def task_21(og_array):
     """
     calculate sum of every 3rd element of array
     """
-    sum = 0
-    for i in range(0, len(og_array), 3):
-        sum += og_array[i]
-    return sum
+    total = 0
+    for i in range(0, len(og_array)):
+        if (i + 1) % 3 == 0:
+            total += og_array[i]
+    return total
 
 def task_22(og_array):
     """
@@ -233,10 +245,14 @@ def task_26(og_array):
 
 def task_27(og_array):
     """
-    convert array into hash
+    convert 2 dimensional array into dictionary
     """
-    #im not sure about the input here, is it simply going to be a 2 dimensional array, an array of arrays?
-    return None
+    dictionary = dict()
+    for i in range(len(og_array)):
+        if og_array[i][0] not in dictionary:
+            dictionary[og_array[i][0]] = []
+        dictionary[og_array[i][0]].append(og_array[i][1])
+    return dictionary
 
 def task_28(og_array):
     """
