@@ -200,3 +200,151 @@ def task_25(num_1, num_2):
     if num_1 < 0 or num_2 < 0:
         raise ValueError("numbers must be non negative")
     return num_1 % 10 == num_2 % 10
+
+def task_26(og_hash):
+    """
+    return total mark  of student for subjects stored in hash
+    """
+    total = 0
+    for mark in og_hash.values():
+        total += mark
+    return total
+
+def task_27(symbol, n):
+    """
+    prints symbol n times
+    """
+    print(symbol * n)
+
+def task_28(year):
+    """
+    check if year is leap year
+    """
+    if year % 4 == 0:
+        return True
+    return False
+
+def task_29(string):
+    """
+    check if string starts with Java, if it does return without Java otherwise return string without changes
+    """
+    if string.startswith("Java"):
+        return string[4:]
+    return string
+
+def task_30(string):
+    """
+    create string using first two characters of a string if the first two characters are 'p' and 's', otherwise return blank string
+    """
+    if string[0] == 'p' and string[1] == 's':
+        return string[2:]
+    return ""
+
+def task_31(val1, val2):
+    """
+    compares which value is closer to 10, returns 0 if theyre equally close
+    """
+    if abs(val1 - 10) < abs(val2 - 10):
+        return val1
+    elif abs(val1 - 10) > abs(val2 - 10):
+        return val2
+    else:
+        return 0
+
+def task_32(val1, val2):
+    """
+    check if two numbers are both in the ranges of 10-20 or 20-30 inclusive
+    """
+    if val1 in range(10, 21) and val2 in range(10, 21):
+        return True
+    elif val1 in range(20, 31) and val2 in range(20, 31):
+        return True
+    return False
+
+def task_33(val1, val2):
+    """
+    check two positive ints and return the larger value in range 20-30 inclusive, return 0 if values not in range
+    """
+    if val1 in range(20, 31) and val1 > val2:
+        return val1
+    elif val2 in range(20, 31) and val2 > val1:
+        return val2
+    return 0
+
+def task_34(og_array):
+    """
+    count number of 5s in an array
+    """
+    count = 0
+    for element in og_array:
+        if element == 5:
+            count += 1
+    return count
+
+def task_35(val1, val2):
+    """
+    check two ints and compare if they have the same last digit
+    """
+    if val1 % 10 == val2 % 10:
+        return True
+    return False
+
+def task_36(og_array):
+    """
+    check if sequence 10, 20, 30 apprears anywhere in array
+    """
+    for i in range(len(og_array) - 2):
+        if og_array[i] == 10 and og_array[i+1] == 20 and og_array[i+2] == 30:
+            return True
+    return False
+
+def task_37(val1, val2):
+    """
+    compare two ints and return 11 if either of them is 11, return sum or diffrence if sum or diffrence is 11
+    """
+    if val1 == 11 or val2 == 11:
+        return 11
+    if val1 + val2 == 11:
+        return val1 + val2
+    if val1 - val2 == 11 or val2 - val1 == 11:
+        return val1 - val2
+    return 0
+
+def task_38(val1, val2, val3):
+    """
+    check 3 ints, return true if one of them is 20 more or less then the others
+    """
+    if val1 == val2 + 20 or val2 == val1 + 20 or val3 == val1 + 20 or val3 == val2 + 20:
+        return True
+    return False
+
+def task_39(val1, val2):
+    """
+    check for larger value, unless if two values have same remainder when divided by 5 then return smaller value,
+    if values are same return 0
+    """
+    if val1 % 5 == val2 % 5:
+        return max(val1, val2)
+    if val1 == val2:
+        return 0
+    return max(val1, val2)
+
+def task_40(val1, val2):
+    """
+    check if two ints contain same digit
+    """
+    val1 = sorted(str(val1))
+    val2 = sorted(str(val2))
+    if val1[0] in val2 or val1[1] in val2:
+        return True
+    return False
+
+def task_41(x, y, z):
+    """
+    check if z or y is close to x(difffrent by at most 1) while the other is far(diffrent from both other values byt at least 3)
+    """
+    if abs(x - z) <= 1 and abs(x - y) >= 3:
+        return True
+    if abs(x - y) <= 1 and abs(x - z) >= 3:
+        return True
+    return False
