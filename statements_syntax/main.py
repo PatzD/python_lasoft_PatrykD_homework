@@ -329,6 +329,32 @@ def task_35(og_array):
             positive.append(element)
     return negative + positive
 
+def task_36(og_array, number):
+    """
+    count number of times number appears in array
+    """
+    return og_array.count(number)
+
+def task_38(og_array):
+    """
+    array with size 10, show items that appear 2 or more times in array
+    """
+    return [element for element in og_array if og_array.count(element) > 1]
+
+def task_39(og_array):
+    """
+    return smalles odd value in array
+    """
+    return min(element for element in og_array if element % 2 == 1)
+
+def task_40(og_array, k, side=False):
+    """
+    shift array cyclically by k elements, if side is True, shift to left, otherwise to right
+    """
+    if side:
+        return og_array[k:] + og_array[:k]
+    return og_array[-k:] + og_array[:-k]
+
 
 
             
