@@ -156,13 +156,10 @@ def task_18(og_array):
 
 def task_19(og_array):
     """
-    calculate average of elements in given array expect largest and smallest values
+    calculate average of elements in given array expect largest and smallest value
     """
-    maxim, minim = max(og_array), min(og_array)
-    total = 0
-    for element in og_array:
-        if element != maxim and element != minim:
-            total += element
+    maxim, minim = max(og_array), min(og_array) 
+    total = sum(og_array) - maxim - minim   
     return total / (len(og_array) - 2)
      
 def task_20(og_array):
