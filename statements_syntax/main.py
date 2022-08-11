@@ -1,5 +1,7 @@
 from array import array
+from itertools import count
 from random import randint
+from xml.dom.minidom import Element
 
 
 def task_1(original_array, value):
@@ -278,3 +280,59 @@ def task_30(start, og_array):
     search items starting with certain letters in array
     """
     return [element for element in og_array if element.startswith(start)]
+
+def task_31(og_array):
+    """
+    iterate array in reverse
+    """
+    return og_array[::-1]
+
+def task_32(og_array, n):
+    """
+    iterate over the first n elements of array
+    """
+    if n > len(og_array):
+        raise ValueError('n is greater than array length')
+    return og_array[:n]
+
+def task_33(og_array):
+    """
+    sort array of strings by length
+    """
+    return sorted(og_array, key=len)
+
+def task_34(og_array):
+    """
+    remove all 0s from array, fill elements on right side of last 0 with values -1
+    """
+    if 0 not in og_array:
+        return og_array
+    temp = False
+    for i in range(len(og_array))[::-1]:
+        if og_array[i] == 0:
+            temp = True
+            og_array.pop(i)
+        if not temp:
+            og_array[i] = -1
+    return og_array
+
+def task_35(og_array):
+    """
+    reorganize array, put all negative values first, then positive, 0 counts as positive
+    """
+    negative = []
+    positive = []
+    for element in og_array:
+        if element < 0:
+            negative.append(element)
+        else:
+            positive.append(element)
+    return negative + positive
+
+
+
+            
+        
+        
+
+
