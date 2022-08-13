@@ -1,0 +1,17 @@
+Class:
+1.Write a Python class named Circle constructed by a radius and two methods which will compute the area and the perimeter of a circle.
+2.Write a Python class named Rectangle constructed by a length and width and a method which will compute the area of a rectangle.
+3.Write a Python class to reverse a string word by word.
+4.Write a Python class to implement pow(x, n).
+5.Write a Python class to find validity of a string of parentheses, '(', ')', '{', '}', '[' and ']. These brackets must be close in the correct order, for example "()" and "()[]{}" are valid but "[)", "({[)]" and "{{{" are invalid.
+6.Define a class called Lunch.Its __init__() method should have two arguments:self and menu.Where menu is a string. Add a method called menu_price.It will involve a if statement:
+if "menu 1" print "Your choice:", menu, "Price 12.00", if "menu 2" print "Your choice:", menu, "Price 13.40", else print "Error in menu".
+To check if it works define: Paul=Lunch("menu 1") and call Paul.menu_price().
+7.Define a Point3D class that inherits from object Inside the Point3D class, define an __init__() function that accepts self, x, y, and z, and assigns these numbers to the member variables self.x,self.y,self.z. Define a __repr__() method that returns "(%d, %d, %d)" % (self.x, self.y, self.z). This tells Python to represent this object in the following format: (x, y, z). Outside the class definition, create a variable named my_point containing a new instance of Point3D with x=1, y=2, and z=3. Finally, print my_point.
+8.Define a class called Songs, it will show the lyrics of a song. Its __init__() method should have two arguments:self and lyrics.lyricsis a list. Inside your class create a method called sing_me_a_songthat prints each element of lyricson his own line. Define a variable:
+happy_bday = Song(["May god bless you, ",
+                   "Have a sunshine on you,",
+                   "Happy Birthday to you !"])
+
+
+Call the sing_me_songmehod on this variable.
