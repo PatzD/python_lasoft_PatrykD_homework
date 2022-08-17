@@ -2,11 +2,10 @@
 class Circle:
     def __init__(self, radius):
         self.radius = radius
-        self.pi = 3.14
     def area(self):
-        return self.pi * self.radius ** 2
+        return 3.14 * self.radius ** 2
     def perimeter(self):
-        return 2 * self.pi * self.radius
+        return 2 * 3.14 * self.radius
 
 
 #2. define class rectangle constructed by length and width and method to compute area
@@ -57,3 +56,35 @@ class Parentheses:
         if len(stack) == 0:
             return True
         return False
+
+#6. define class lunch, initialize with menu string and method menu_price, if "menu 1" print "price 12.00" if "menu 2" print "price 13.40", else print "Error in menu"
+class Lunch:
+    def __init__(self, menu):
+        self.menu = menu
+    def menu_price(self):
+        if self.menu == "menu 1":
+            return "price 12.00"
+        elif self.menu == "menu 2":
+            return "price 13.40"
+        else:
+            return "Error in menu"
+
+"""
+7. define Point3D class that inherits from object inside the Point3D class,
+initialize with z,y,z coordinates, define __repr__() to return '(%d, %d, %d)' % (self.x, self.y, self.z)
+"""
+class Point3D(object):
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+    def __repr__(self):
+        return '(%d, %d, %d)' % (self.x, self.y, self.z)
+
+#8. define class songs, init with lyricsis as list, define method to return each lyric as seperate line
+class Song:
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
+    def sing_me_a_song(self):
+        for lyric in self.lyrics:
+            print(lyric)
