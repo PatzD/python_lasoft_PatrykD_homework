@@ -3,9 +3,11 @@ class Circle:
     def __init__(self, radius):
         self.radius = radius
     def area(self):
-        return 3.14 * self.radius ** 2
+        pi = 3.14
+        return pi * self.radius ** 2
     def perimeter(self):
-        return 2 * 3.14 * self.radius
+        pi = 3.14
+        return 2 * pi * self.radius
 
 
 #2. define class rectangle constructed by length and width and method to compute area
